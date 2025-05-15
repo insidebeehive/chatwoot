@@ -159,7 +159,7 @@ export default {
                   @error="onVideoLoadError"
                 />
                 <AudioBubble
-                  v-else-if="attachment.file_type === 'audio' && !hasAudioError"
+                  v-if="attachment.file_type === 'audio' && !hasAudioError"
                   :url="attachment.data_url"
                   @error="onAudioLoadError"
                 />
