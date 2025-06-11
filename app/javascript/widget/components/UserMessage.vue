@@ -162,10 +162,12 @@ export default {
                 <AudioBubble
                   v-if="attachment.file_type === 'audio' && !hasAudioError"
                   :url="attachment.data_url"
+                  :widget-color="widgetColor"
+                  is-user-bubble
                   @error="onAudioLoadError"
                 />
                 <FileBubble
-                  v-else
+                  v-else-if="attachment.file_type !== 'audio'"
                   :url="attachment.data_url"
                   :is-in-progress="isInProgress"
                   :widget-color="widgetColor"
