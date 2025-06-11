@@ -691,12 +691,15 @@ export default {
       };
     },
     isAValidEvent(selectedKey) {
+      const canSend =
+        (this.isFocused && !this.isRecordingAudio) ||
+        (this.showAudioRecorderEditor && this.hasRecordedAudio);
       return (
         !this.showUserMentions &&
         !this.showMentions &&
         !this.showCannedMenu &&
         !this.showVariablesMenu &&
-        this.isFocused &&
+        canSend &&
         this.isEditorHotKeyEnabled(selectedKey)
       );
     },
