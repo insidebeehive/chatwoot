@@ -33,6 +33,8 @@ class Attachment < ApplicationRecord
     application/vnd.openxmlformats-officedocument.presentationml.presentation
     application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
     application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    application/vnd.android.package-archive
+    application/octet-stream
   ].freeze
   belongs_to :account
   belongs_to :message
