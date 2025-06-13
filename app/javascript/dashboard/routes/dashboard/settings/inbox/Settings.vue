@@ -1082,6 +1082,18 @@ export default {
                       {{ $t('INBOX_MGMT.FEATURES.USE_INBOX_AVATAR_FOR_BOT') }}
                     </label>
                   </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      id="voice_note"
+                      v-model="selectedFeatureFlags"
+                      type="checkbox"
+                      value="voice_note"
+                      @input="handleFeatureFlag"
+                    />
+                    <label for="voice_note">
+                      {{ $t('INBOX_MGMT.FEATURES.DISPLAY_VOICE_NOTE') }}
+                    </label>
+                  </div>
                 </div>
               </SettingsFieldSection>
             </SettingsAccordion>
