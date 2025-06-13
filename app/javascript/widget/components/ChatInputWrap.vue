@@ -59,6 +59,9 @@ export default {
     showAttachment() {
       return this.canHandleAttachments && this.userInput.length === 0;
     },
+    showVoiceNote() {
+      return this.hasVoiceNoteEnabled && this.userInput.length === 0;
+    },
     showSendButton() {
       return this.userInput.length > 0;
     },
@@ -177,7 +180,11 @@ export default {
         :on-click="emojiOnClick"
         @keydown.esc="hideEmojiPicker"
       />
-      <VoiceRecorder class="text-n-slate-12" :on-attach="onSendAttachment" />
+      <VoiceRecorder
+        v-if="showVoiceNote"
+        class="text-n-slate-12"
+        :on-attach="onSendAttachment"
+      />
       <ChatSendButton
         v-if="showSendButton"
         :color="widgetColor"

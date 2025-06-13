@@ -49,6 +49,7 @@ describe('configMixin', () => {
     expect(wrapper.vm.hasEmojiPickerEnabled).toBe(true);
     expect(wrapper.vm.hasEndConversationEnabled).toBe(true);
     expect(wrapper.vm.hasAttachmentsEnabled).toBe(true);
+    expect(wrapper.vm.hasVoiceNoteEnabled).toBe(true);
     expect(wrapper.vm.hasAConnectedAgentBot).toBe(true);
     expect(wrapper.vm.useInboxAvatarForBot).toBe(true);
     expect(wrapper.vm.inboxAvatarUrl).toBe('https://test.url');
@@ -61,6 +62,7 @@ describe('configMixin', () => {
         'attachments',
         'end_conversation',
         'use_inbox_avatar_for_bot',
+        'voice_note',
       ],
       preChatFormOptions: {
         pre_chat_message: '',

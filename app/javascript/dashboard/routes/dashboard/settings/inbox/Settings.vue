@@ -854,6 +854,17 @@ export default {
               {{ $t('INBOX_MGMT.FEATURES.USE_INBOX_AVATAR_FOR_BOT') }}
             </label>
           </div>
+          <div v-if="isAWebWidgetInbox" class="flex gap-2 pb-4">
+            <input
+              v-model="selectedFeatureFlags"
+              type="checkbox"
+              value="voice_note"
+              @input="handleFeatureFlag"
+            />
+            <label for="voice_note">
+              {{ $t('INBOX_MGMT.FEATURES.DISPLAY_VOICE_NOTE') }}
+            </label>
+          </div>
         </SettingsSection>
         <SettingsSection
           v-if="isAWebWidgetInbox || isAnEmailChannel"
