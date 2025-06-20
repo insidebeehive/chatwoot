@@ -51,7 +51,7 @@
           "LABEL": "Duração da inatividade",
           "HELP": "Período de inatividade após o qual a conversa é automaticamente resolvida",
           "PLACEHOLDER": "30",
-          "ERROR": "A duração de auto-resolução deve ser entre 10 minutos e 999 dias",
+          "ERROR": "A duração de auto-resolução deve ser entre 2 minutos e 999 dias",
           "API": {
             "SUCCESS": "Definições de auto-resolução atualizadas",
             "ERROR": "Falha ao atualizar as definições de auto-resolução"
@@ -108,7 +108,7 @@
         "LABEL": "Duração de inatividade para resolução",
         "HELP": "Duração após a qual a conversa deve ser automaticamente resolvida se não houver atividade",
         "PLACEHOLDER": "30",
-        "ERROR": "A duração de auto-resolução deve ser entre 10 minutos e 999 dias",
+        "ERROR": "A duração de auto-resolução deve ser entre 2 minutos e 999 dias",
         "API": {
           "SUCCESS": "Definições de auto-resolução atualizadas",
           "ERROR": "Falha ao atualizar as definições de auto-resolução"

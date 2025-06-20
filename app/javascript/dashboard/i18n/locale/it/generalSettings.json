@@ -51,7 +51,7 @@
           "LABEL": "Durata inattività",
           "HELP": "Periodo d'inattività dopo il quale la conversazione è risolta automaticamente",
           "PLACEHOLDER": "30",
-          "ERROR": "La durata della risoluzione automatica deve essere compresa tra 10 minuti e 999 giorni",
+          "ERROR": "La durata della risoluzione automatica deve essere compresa tra 2 minuti e 999 giorni",
           "API": {
             "SUCCESS": "Impostazioni di risoluzione automatica aggiornate con successo",
             "ERROR": "Impossibile aggiornare le impostazioni di risoluzione automatica"
@@ -108,7 +108,7 @@
         "LABEL": "Durata dell'inattività per la risoluzione",
         "HELP": "Durata dopo la quale una conversazione si dovrebbe risolvere automaticamente se non c'è attività",
         "PLACEHOLDER": "30",
-        "ERROR": "La durata della risoluzione automatica deve essere compresa tra 10 minuti e 999 giorni",
+        "ERROR": "La durata della risoluzione automatica deve essere compresa tra 2 minuti e 999 giorni",
         "API": {
           "SUCCESS": "Impostazioni di risoluzione automatica aggiornate con successo",
           "ERROR": "Impossibile aggiornare le impostazioni di risoluzione automatica"
