@@ -93,7 +93,7 @@ const updateAccountSettings = async settings => {
 };
 
 const handleSubmit = async () => {
-  if (duration.value < 10) {
+  if (duration.value < 2) {
     useAlert(t('GENERAL_SETTINGS.FORM.AUTO_RESOLVE.DURATION.ERROR'));
     return Promise.resolve();
   }

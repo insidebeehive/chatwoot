@@ -51,7 +51,7 @@
           "LABEL": "არააქტიურობის ხანგრძლივობა",
           "HELP": "არააქტიურობის პერიოდი, რის შემდეგაც საუბარი ავტომატურად დაიხურება",
           "PLACEHOLDER": "30",
-          "ERROR": "Auto resolve duration should be between 10 minutes and 999 days",
+          "ERROR": "Auto resolve duration should be between 2 minutes and 999 days",
           "API": {
             "SUCCESS": "Auto resolve settings updated successfully",
             "ERROR": "Failed to update auto resolve settings"
@@ -108,7 +108,7 @@
         "LABEL": "Inactivity duration for resolution",
         "HELP": "Duration after a conversation should auto resolve if there is no activity",
         "PLACEHOLDER": "30",
-        "ERROR": "Auto resolve duration should be between 10 minutes and 999 days",
+        "ERROR": "Auto resolve duration should be between 2 minutes and 999 days",
         "API": {
           "SUCCESS": "Auto resolve settings updated successfully",
           "ERROR": "Failed to update auto resolve settings"
