@@ -10,9 +10,9 @@ export function useChannelIcon(inbox) {
     'Channel::Telegram': 'i-woot-telegram',
     'Channel::TwilioSms': 'i-woot-sms',
     'Channel::TwitterProfile': 'i-ri-twitter-x-fill',
-    'Channel::WebWidget': 'i-woot-website',
-    'Channel::Whatsapp': 'i-woot-whatsapp',
-    'Channel::Instagram': 'i-woot-instagram',
+    'Channel::WebWidget': 'i-ri-global-fill',
+    'Channel::Whatsapp': 'i-ri-whatsapp-fill',
+    'Channel::Instagram': 'i-ri-instagram-fill',
     'Channel::Tiktok': 'i-woot-tiktok',
     'Channel::Voice': 'i-ri-phone-fill',
   };

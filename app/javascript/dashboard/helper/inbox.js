@@ -10,13 +10,7 @@ export const INBOX_TYPES = {
   LINE: 'Channel::Line',
   SMS: 'Channel::Sms',
   INSTAGRAM: 'Channel::Instagram',
-  TIKTOK: 'Channel::Tiktok',
   VOICE: 'Channel::Voice',
-};
-
-export const TWILIO_CHANNEL_MEDIUM = {
-  WHATSAPP: 'whatsapp',
-  SMS: 'sms',
 };
 
 const INBOX_ICON_MAP_FILL = {
@@ -29,7 +23,6 @@ const INBOX_ICON_MAP_FILL = {
   [INBOX_TYPES.TELEGRAM]: 'i-ri-telegram-fill',
   [INBOX_TYPES.LINE]: 'i-ri-line-fill',
   [INBOX_TYPES.INSTAGRAM]: 'i-ri-instagram-fill',
-  [INBOX_TYPES.TIKTOK]: 'i-ri-tiktok-fill',
   [INBOX_TYPES.VOICE]: 'i-ri-phone-fill',
 };
 
@@ -45,7 +38,6 @@ const INBOX_ICON_MAP_LINE = {
   [INBOX_TYPES.TELEGRAM]: 'i-ri-telegram-line',
   [INBOX_TYPES.LINE]: 'i-ri-line-line',
   [INBOX_TYPES.INSTAGRAM]: 'i-ri-instagram-line',
-  [INBOX_TYPES.TIKTOK]: 'i-ri-tiktok-line',
   [INBOX_TYPES.VOICE]: 'i-ri-phone-line',
 };
 
@@ -139,9 +131,6 @@ export const getInboxClassByType = (type, phoneNumber) => {
     case INBOX_TYPES.INSTAGRAM:
       return 'brand-instagram';
 
-    case INBOX_TYPES.TIKTOK:
-      return 'brand-tiktok';
-
     case INBOX_TYPES.VOICE:
       return 'phone';
 
@@ -150,14 +139,14 @@ export const getInboxClassByType = (type, phoneNumber) => {
   }
 };
 
-export const getInboxIconByType = (type, medium, variant = 'fill') => {
+export const getInboxIconByType = (type, phoneNumber, variant = 'fill') => {
   const iconMap =
     variant === 'fill' ? INBOX_ICON_MAP_FILL : INBOX_ICON_MAP_LINE;
   const defaultIcon =
     variant === 'fill' ? DEFAULT_ICON_FILL : DEFAULT_ICON_LINE;
 
   // Special case for Twilio (whatsapp and sms)
-  if (type === INBOX_TYPES.TWILIO && medium === 'whatsapp') {
+  if (type === INBOX_TYPES.TWILIO && phoneNumber?.startsWith('whatsapp')) {
     return iconMap[INBOX_TYPES.WHATSAPP];
   }
 

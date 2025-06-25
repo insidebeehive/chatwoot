@@ -17,7 +17,6 @@ export const INBOX_FEATURE_MAP = {
     INBOX_TYPES.TWITTER,
     INBOX_TYPES.WHATSAPP,
     INBOX_TYPES.TELEGRAM,
-    INBOX_TYPES.TIKTOK,
     INBOX_TYPES.API,
   ],
   [INBOX_FEATURES.REPLY_TO_OUTGOING]: [
@@ -25,30 +24,26 @@ export const INBOX_FEATURE_MAP = {
     INBOX_TYPES.TWITTER,
     INBOX_TYPES.WHATSAPP,
     INBOX_TYPES.TELEGRAM,
-    INBOX_TYPES.TIKTOK,
     INBOX_TYPES.API,
   ],
 };
 
 /**
- * Composable for handling inbox-related functionality
- * @param {string|null} inboxId - Optional inbox ID. If not provided, uses current chat's inbox
- * @returns {Object} An object containing inbox type checking functions
+ * Composable for handling macro-related functionality
+ * @returns {Object} An object containing the getMacroDropdownValues function
  */
-export const useInbox = (inboxId = null) => {
+export const useInbox = () => {
   const currentChat = useMapGetter('getSelectedChat');
   const inboxGetter = useMapGetter('inboxes/getInboxById');
 
   const inbox = computed(() => {
-    const targetInboxId = inboxId || currentChat.value?.inbox_id;
+    const inboxId = currentChat.value.inbox_id;
 
-    if (!targetInboxId) return null;
-
-    return useCamelCase(inboxGetter.value(targetInboxId), { deep: true });
+    return useCamelCase(inboxGetter.value(inboxId), { deep: true });
   });
 
   const channelType = computed(() => {
-    return inbox.value?.channelType;
+    return inbox.value.channelType;
   });
 
   const isAPIInbox = computed(() => {
@@ -80,19 +75,19 @@ export const useInbox = (inboxId = null) => {
   });
 
   const whatsAppAPIProvider = computed(() => {
-    return inbox.value?.provider || '';
+    return inbox.value.provider || '';
   });
 
   const isAMicrosoftInbox = computed(() => {
-    return isAnEmailChannel.value && inbox.value?.provider === 'microsoft';
+    return isAnEmailChannel.value && inbox.value.provider === 'microsoft';
   });
 
   const isAGoogleInbox = computed(() => {
-    return isAnEmailChannel.value && inbox.value?.provider === 'google';
+    return isAnEmailChannel.value && inbox.value.provider === 'google';
   });
 
   const isATwilioSMSChannel = computed(() => {
-    const { medium: medium = '' } = inbox.value || {};
+    const { medium: medium = '' } = inbox.value;
     return isATwilioChannel.value && medium === 'sms';
   });
 
@@ -101,7 +96,7 @@ export const useInbox = (inboxId = null) => {
   });
 
   const isATwilioWhatsAppChannel = computed(() => {
-    const { medium: medium = '' } = inbox.value || {};
+    const { medium: medium = '' } = inbox.value;
     return isATwilioChannel.value && medium === 'whatsapp';
   });
 
@@ -130,10 +125,6 @@ export const useInbox = (inboxId = null) => {
     return channelType.value === INBOX_TYPES.INSTAGRAM;
   });
 
-  const isATiktokChannel = computed(() => {
-    return channelType.value === INBOX_TYPES.TIKTOK;
-  });
-
   const isAVoiceChannel = computed(() => {
     return channelType.value === INBOX_TYPES.VOICE;
   });
@@ -155,7 +146,6 @@ export const useInbox = (inboxId = null) => {
     is360DialogWhatsAppChannel,
     isAnEmailChannel,
     isAnInstagramChannel,
-    isATiktokChannel,
     isAVoiceChannel,
   };
 };
