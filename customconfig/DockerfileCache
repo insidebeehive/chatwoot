@@ -87,7 +87,12 @@ RUN if [ "$RAILS_ENV" = "production" ]; then \
   fi
 
 # Generate .git_sha file with current commit hash
-RUN git rev-parse HEAD > /app/.git_sha
+RUN if [ -d ".git" ] && git rev-parse HEAD > /app/.git_sha 2>/dev/null; then \
+    echo "Git SHA generated successfully"; \
+  else \
+    echo "no-git-repo-$(date +%s)" > /app/.git_sha; \
+    echo "Git SHA fallback generated"; \
+  fi
 
 # Clean up to reduce final image size
 RUN rm -rf /gems/ruby/3.4.0/cache/*.gem \
