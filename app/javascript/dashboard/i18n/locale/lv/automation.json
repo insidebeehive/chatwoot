@@ -131,7 +131,6 @@
       "CONVERSATION_CREATED": "Saruna izveidota",
       "CONVERSATION_UPDATED": "Saruna Atjaunināta",
       "MESSAGE_CREATED": "Ziņojums Izveidots",
-      "CONVERSATION_RESOLVED": "Conversation Resolved",
       "CONVERSATION_OPENED": "Saruna Atvērta"
     },
     "ACTIONS": {
@@ -147,21 +146,9 @@
       "SEND_WEBHOOK_EVENT": "Nosūtīt Webhook Notikumu",
       "SEND_ATTACHMENT": "Sūtīt Pielikumu",
       "SEND_MESSAGE": "Nosūtīt Ziņojumu",
-      "ADD_PRIVATE_NOTE": "Pievienot Privātu Piezīmi",
       "CHANGE_PRIORITY": "Mainīt prioritāti",
       "ADD_SLA": "Pievienot SLA",
       "OPEN_CONVERSATION": "Atvērt sarunu"
-    },
-    "MESSAGE_TYPES": {
-      "INCOMING": "Incoming Message",
-      "OUTGOING": "Outgoing Message"
-    },
-    "PRIORITY_TYPES": {
-      "NONE": "Nav",
-      "LOW": "Zema",
-      "MEDIUM": "Vidēja",
-      "HIGH": "Augsta",
-      "URGENT": "Steidzama"
     },
     "ATTRIBUTES": {
       "MESSAGE_TYPE": "Ziņojuma Tips",
@@ -177,8 +164,7 @@
       "REFERER_LINK": "Novirzītāja Saite",
       "ASSIGNEE_NAME": "Uzdevuma saņēmējs",
       "TEAM_NAME": "Komanda",
-      "PRIORITY": "Prioritāte",
-      "LABELS": "Etiķetes"
+      "PRIORITY": "Prioritāte"
     }
   }
 }

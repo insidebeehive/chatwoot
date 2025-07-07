@@ -130,55 +130,41 @@
     "EVENTS": {
       "CONVERSATION_CREATED": "Conversation Created",
       "CONVERSATION_UPDATED": "Conversation Updated",
-      "MESSAGE_CREATED": "Mesazhi u krijua",
-      "CONVERSATION_RESOLVED": "Biseda u zgjidh",
-      "CONVERSATION_OPENED": "Biseda u hap"
+      "MESSAGE_CREATED": "Message Created",
+      "CONVERSATION_OPENED": "Conversation Opened"
     },
     "ACTIONS": {
-      "ASSIGN_AGENT": "Cakto te një agjent",
-      "ASSIGN_TEAM": "Cakto një ekip",
-      "ADD_LABEL": "Shto një etiketë",
-      "REMOVE_LABEL": "Hiq një etiketë",
-      "SEND_EMAIL_TO_TEAM": "Dërgo një email ekipit",
-      "SEND_EMAIL_TRANSCRIPT": "Dërgo një transkript me email",
-      "MUTE_CONVERSATION": "Heshto bisedën",
+      "ASSIGN_AGENT": "Assign to Agent",
+      "ASSIGN_TEAM": "Assign a Team",
+      "ADD_LABEL": "Add a Label",
+      "REMOVE_LABEL": "Remove a Label",
+      "SEND_EMAIL_TO_TEAM": "Send an Email to Team",
+      "SEND_EMAIL_TRANSCRIPT": "Send an Email Transcript",
+      "MUTE_CONVERSATION": "Mute Conversation",
       "SNOOZE_CONVERSATION": "Snooze Conversation",
       "RESOLVE_CONVERSATION": "Resolve Conversation",
-      "SEND_WEBHOOK_EVENT": "Dërgo një ngjarje webhook",
-      "SEND_ATTACHMENT": "Dërgo një bashkëngjitje",
-      "SEND_MESSAGE": "Dërgo një mesazh",
-      "ADD_PRIVATE_NOTE": "Shto një shënim privat",
+      "SEND_WEBHOOK_EVENT": "Send Webhook Event",
+      "SEND_ATTACHMENT": "Send Attachment",
+      "SEND_MESSAGE": "Send a Message",
       "CHANGE_PRIORITY": "Change Priority",
       "ADD_SLA": "Add SLA",
       "OPEN_CONVERSATION": "Open conversation"
     },
-    "MESSAGE_TYPES": {
-      "INCOMING": "Mesazh hyrës",
-      "OUTGOING": "Mesazh dalës"
-    },
-    "PRIORITY_TYPES": {
-      "NONE": "None",
-      "LOW": "Low",
-      "MEDIUM": "Medium",
-      "HIGH": "High",
-      "URGENT": "Urgent"
-    },
     "ATTRIBUTES": {
-      "MESSAGE_TYPE": "Lloji i mesazhit",
-      "MESSAGE_CONTAINS": "Mesazhi përmban",
+      "MESSAGE_TYPE": "Message Type",
+      "MESSAGE_CONTAINS": "Message Contains",
       "EMAIL": "Email",
       "INBOX": "Inbox",
-      "CONVERSATION_LANGUAGE": "Gjuha e bisedës",
+      "CONVERSATION_LANGUAGE": "Conversation Language",
       "PHONE_NUMBER": "Phone Number",
       "STATUS": "Status",
       "BROWSER_LANGUAGE": "Browser Language",
-      "MAIL_SUBJECT": "Subjekti i emailit",
+      "MAIL_SUBJECT": "Email Subject",
       "COUNTRY_NAME": "Country",
-      "REFERER_LINK": "Lidhja e referuesit",
+      "REFERER_LINK": "Referrer Link",
       "ASSIGNEE_NAME": "Assignee",
       "TEAM_NAME": "Team",
-      "PRIORITY": "Priority",
-      "LABELS": "Labels"
+      "PRIORITY": "Priority"
     }
   }
 }
