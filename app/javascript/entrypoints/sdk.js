@@ -76,7 +76,7 @@ const runSDK = ({ baseUrl, websiteToken }) => {
     welcomeDescription: chatwootSettings.welcomeDescription || '',
     availableMessage: chatwootSettings.availableMessage || '',
     unavailableMessage: chatwootSettings.unavailableMessage || '',
-    enableFileUpload: chatwootSettings.enableFileUpload,
+    enableFileUpload: chatwootSettings.enableFileUpload ?? true,
     enableEmojiPicker: chatwootSettings.enableEmojiPicker ?? true,
     enableEndConversation: chatwootSettings.enableEndConversation ?? true,
 
