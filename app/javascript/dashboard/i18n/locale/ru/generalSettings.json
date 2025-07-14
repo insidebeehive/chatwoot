@@ -51,7 +51,7 @@
           "LABEL": "Время бездействия",
           "HELP": "Время бездействия, после которого диалог будет завершен",
           "PLACEHOLDER": "30",
-          "ERROR": "Время автозавершения должно быть между 2 минутами и 999 днями",
+          "ERROR": "Время автозавершения должно быть между 10 минутами и 999 днями",
           "API": {
             "SUCCESS": "Auto resolve settings updated successfully",
             "ERROR": "Failed to update auto resolve settings"
@@ -108,7 +108,7 @@
         "LABEL": "Inactivity duration for resolution",
         "HELP": "Duration after a conversation should auto resolve if there is no activity",
         "PLACEHOLDER": "30",
-        "ERROR": "Время автозавершения должно быть между 2 минутами и 999 днями",
+        "ERROR": "Время автозавершения должно быть между 10 минутами и 999 днями",
         "API": {
           "SUCCESS": "Настройки автозавершения сохранены",
           "ERROR": "Failed to update auto resolve settings"
