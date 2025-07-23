@@ -1105,9 +1105,9 @@ ActiveRecord::Schema[7.1].define(version: 2026_04_10_092753) do
     t.string "homepage_link"
     t.string "page_title"
     t.text "header_text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.jsonb "config", default: {"allowed_locales" => ["en"]}
+    t.datetime "created_at", precision: nil, null: false
+    t.datetime "updated_at", precision: nil, null: false
+    t.jsonb "config", default: {"allowed_locales"=>["en"]}
     t.boolean "archived", default: false
     t.bigint "channel_web_widget_id"
     t.jsonb "ssl_settings", default: {}, null: false
