@@ -31,6 +31,7 @@ export default {
         : decodeURI(this.fileName);
     },
     fileName() {
+      if (!this.url) return '';
       return this.url.substring(this.url.lastIndexOf('/') + 1);
     },
     contrastingTextColor() {
