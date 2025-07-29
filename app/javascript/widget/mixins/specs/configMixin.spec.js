@@ -1,6 +1,5 @@
 import { shallowMount } from '@vue/test-utils';
 import configMixin from '../configMixin';
-import { reactive } from 'vue';
 
 const preChatFields = [
   {
@@ -29,6 +28,7 @@ global.chatwootWebChannel = {
     'attachments',
     'end_conversation',
     'use_inbox_avatar_for_bot',
+    'voice_note',
   ],
   preChatFormOptions: { pre_chat_fields: preChatFields, pre_chat_message: '' },
   preChatFormEnabled: true,
@@ -38,11 +38,6 @@ describe('configMixin', () => {
   test('returns config', () => {
     const wrapper = shallowMount({
       mixins: [configMixin],
-      data() {
-        return {
-          channelConfig: reactive(global.chatwootWebChannel),
-        };
-      },
       template: '<div />', // Render a simple div as the template
     });
 
