@@ -158,6 +158,14 @@ export const MESSAGE_VARIABLES = [
     label: 'Agent email',
     key: 'agent.email',
   },
+  {
+    key: 'inbox.name',
+    label: 'Inbox name',
+  },
+  {
+    label: 'Inbox id',
+    key: 'inbox.id',
+  },
 ];
 
 export const ATTACHMENT_ICONS = {
