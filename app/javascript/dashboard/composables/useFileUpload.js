@@ -4,20 +4,14 @@ import { useI18n } from 'vue-i18n';
 import { DirectUpload } from 'activestorage';
 import { checkFileSizeLimit } from 'shared/helpers/FileHelper';
 import { getMaxUploadSizeByChannel } from '@chatwoot/utils';
-import {
-  DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE,
-  resolveMaximumFileUploadSize,
-} from 'shared/helpers/FileHelper';
-import { INBOX_TYPES } from 'dashboard/helper/inbox';
 
 /**
  * Composable for handling file uploads in conversations
  * @param {Object} options
  * @param {Object} options.inbox - Current inbox object (has channel_type, medium, etc.)
  * @param {Function} options.attachFile - Callback to handle file attachment
- * @param {boolean} options.isPrivateNote - Whether the upload is for a private note
  */
-export const useFileUpload = ({ inbox, attachFile, isPrivateNote = false }) => {
+export const useFileUpload = ({ inbox, attachFile }) => {
   const { t } = useI18n();
 
   const accountId = useMapGetter('getCurrentAccountId');
@@ -25,35 +19,13 @@ export const useFileUpload = ({ inbox, attachFile, isPrivateNote = false }) => {
   const currentChat = useMapGetter('getSelectedChat');
   const globalConfig = useMapGetter('globalConfig/get');
 
-  const installationLimit = resolveMaximumFileUploadSize(
-    globalConfig.value?.maximumFileUploadSize
-  );
-
   // helper: compute max upload size for a given file's mime
-  const maxSizeFor = mime => {
-    // Use default/installation limit for private notes
-    if (isPrivateNote) {
-      return installationLimit;
-    }
-
-    const channelType = inbox?.channel_type;
-
-    if (!channelType || channelType === INBOX_TYPES.WEB) {
-      return installationLimit;
-    }
-
-    const channelLimit = getMaxUploadSizeByChannel({
-      channelType,
+  const maxSizeFor = mime =>
+    getMaxUploadSizeByChannel({
+      channelType: inbox?.channel_type,
       medium: inbox?.medium, // e.g. 'sms' | 'whatsapp' | etc.
       mime, // e.g. 'image/png'
     });
-
-    if (channelLimit === DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE) {
-      return installationLimit;
-    }
-
-    return Math.min(channelLimit, installationLimit);
-  };
 
   const alertOverLimit = maxSizeMB =>
     useAlert(
