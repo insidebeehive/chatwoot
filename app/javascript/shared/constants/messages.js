@@ -163,3 +163,9 @@ export const ATTACHMENT_ICONS = {
   location: 'location',
   fallback: 'link',
 };
+
+export const TWILIO_CONTENT_TEMPLATE_TYPES = {
+  TEXT: 'text',
+  MEDIA: 'media',
+  QUICK_REPLY: 'quick_reply',
+};
