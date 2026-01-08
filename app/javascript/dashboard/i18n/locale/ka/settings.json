@@ -239,7 +239,11 @@
     "APPEARANCE": "Change appearance",
     "SUPER_ADMIN_CONSOLE": "SuperAdmin console",
     "DOCS": "Read documentation",
+<<<<<<< HEAD
     "CHANGELOG": "ცვლილებების ჟურნალი",
+=======
+    "CHANGELOG": "Changelog",
+>>>>>>> 4db811354 (chore: Update translations (#12228))
     "LOGOUT": "Log out"
   },
   "APP_GLOBAL": {

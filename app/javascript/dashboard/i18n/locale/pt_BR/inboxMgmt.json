@@ -328,6 +328,7 @@
           },
           "API_KEY_SECRET": {
             "LABEL": "Segredo da Chave API",
+<<<<<<< HEAD
             "PLACEHOLDER": "Enter your Twilio API Key Secret",
             "REQUIRED": "API Key Secret is required"
           },
@@ -338,6 +339,19 @@
           }
         },
         "SUBMIT_BUTTON": "Create Voice Channel",
+=======
+            "PLACEHOLDER": "Digite o segredo da sua chave de API do Twilio",
+            "REQUIRED": "Segredo da chave da API é obrigatório"
+          }
+        },
+        "CONFIGURATION": {
+          "TWILIO_VOICE_URL_TITLE": "Twilio Voice URL",
+          "TWILIO_VOICE_URL_SUBTITLE": "Configure this URL as the Voice URL on your Twilio phone number and TwiML App.",
+          "TWILIO_STATUS_URL_TITLE": "Twilio Status Callback URL",
+          "TWILIO_STATUS_URL_SUBTITLE": "Configure this URL as the Status Callback URL on your Twilio phone number."
+        },
+        "SUBMIT_BUTTON": "Criar Canal de Voz",
+>>>>>>> 4db811354 (chore: Update translations (#12228))
         "API": {
           "ERROR_MESSAGE": "We were not able to create the voice channel"
         }

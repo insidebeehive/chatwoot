@@ -239,7 +239,11 @@
     "APPEARANCE": "Alterar Tema",
     "SUPER_ADMIN_CONSOLE": "Console de Super Admin",
     "DOCS": "Ler documentação",
+<<<<<<< HEAD
     "CHANGELOG": "Notas de versão",
+=======
+    "CHANGELOG": "Changelog",
+>>>>>>> 4db811354 (chore: Update translations (#12228))
     "LOGOUT": "Encerrar sessão"
   },
   "APP_GLOBAL": {

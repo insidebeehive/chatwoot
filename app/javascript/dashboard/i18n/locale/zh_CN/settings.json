@@ -239,7 +239,11 @@
     "APPEARANCE": "更改外观",
     "SUPER_ADMIN_CONSOLE": "超级管理员控制台",
     "DOCS": "阅读文档",
+<<<<<<< HEAD
     "CHANGELOG": "更新日志",
+=======
+    "CHANGELOG": "Changelog",
+>>>>>>> 4db811354 (chore: Update translations (#12228))
     "LOGOUT": "注销"
   },
   "APP_GLOBAL": {
