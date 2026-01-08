@@ -17,18 +17,11 @@
     "IP_ADDRESS": "Adresse IP",
     "CREATED_AT_LABEL": "Créé",
     "NEW_MESSAGE": "Nouveau message",
-<<<<<<< HEAD
     "CALL": "Appel",
     "CALL_INITIATED": "Calling the contact…",
     "CALL_FAILED": "Unable to start the call. Please try again.",
     "VOICE_INBOX_PICKER": {
       "TITLE": "Choisir une boîte de réception vocale"
-=======
-    "CALL": "Call",
-    "CALL_UNDER_DEVELOPMENT": "Calling is under development",
-    "VOICE_INBOX_PICKER": {
-      "TITLE": "Choose a voice inbox"
->>>>>>> 4db811354 (chore: Update translations (#12228))
     },
     "CONVERSATIONS": {
       "NO_RECORDS_FOUND": "Il n'y a aucune conversation précédente associée à ce contact.",

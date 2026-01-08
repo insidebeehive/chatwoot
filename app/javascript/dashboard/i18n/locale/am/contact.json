@@ -18,12 +18,8 @@
     "CREATED_AT_LABEL": "Created",
     "NEW_MESSAGE": "New message",
     "CALL": "ደውል",
-<<<<<<< HEAD
     "CALL_INITIATED": "Calling the contact…",
     "CALL_FAILED": "Unable to start the call. Please try again.",
-=======
-    "CALL_UNDER_DEVELOPMENT": "መደወል በልማት ላይ ነው",
->>>>>>> 4db811354 (chore: Update translations (#12228))
     "VOICE_INBOX_PICKER": {
       "TITLE": "የድምፅ ኢንቦክስ ይምረጡ"
     },
@@ -566,12 +562,8 @@
         "EXPAND": "Expand",
         "COLLAPSE": "ሰብስብ",
         "NO_NOTES": "ማስታወሻዎች የሉም፣ ከእውቂያው ዝርዝር ገፅ ላይ ማስታወሻዎችን መጨመር ይችላሉ።",
-<<<<<<< HEAD
         "EMPTY_STATE": "There are no notes associated to this contact. You can add a note by typing in the box above.",
         "CONVERSATION_EMPTY_STATE": "There are no notes yet. Use the Add note button to create one."
-=======
-        "EMPTY_STATE": "There are no notes associated to this contact. You can add a note by typing in the box above."
->>>>>>> 4db811354 (chore: Update translations (#12228))
       }
     },
     "EMPTY_STATE": {
@@ -581,7 +573,6 @@
       "SEARCH_EMPTY_STATE_TITLE": "No contacts matches your search 🔍",
       "LIST_EMPTY_STATE_TITLE": "No contacts available in this view 📋",
       "ACTIVE_EMPTY_STATE_TITLE": "በአሁኑ ጊዜ ንቁ እውቂያዎች የሉም 🌙"
-<<<<<<< HEAD
     }
   },
   "CONTACTS_BULK_ACTIONS": {
@@ -603,8 +594,6 @@
       "SINGULAR_DESCRIPTION": "This will permanently delete the selected contact. This action cannot be undone.",
       "CONFIRM_MULTIPLE": "Delete contacts",
       "CONFIRM_SINGLE": "Delete contact"
-=======
->>>>>>> 4db811354 (chore: Update translations (#12228))
     }
   },
   "COMPOSE_NEW_CONVERSATION": {

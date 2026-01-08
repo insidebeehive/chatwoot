@@ -18,12 +18,8 @@
     "CREATED_AT_LABEL": "Sukurta",
     "NEW_MESSAGE": "Naujas pranešimas",
     "CALL": "Call",
-<<<<<<< HEAD
     "CALL_INITIATED": "Skambinama kontaktui...",
     "CALL_FAILED": "Nepavyko pradėti skambučio. Bandykite dar kartą.",
-=======
-    "CALL_UNDER_DEVELOPMENT": "Calling is under development",
->>>>>>> 4db811354 (chore: Update translations (#12228))
     "VOICE_INBOX_PICKER": {
       "TITLE": "Choose a voice inbox"
     },

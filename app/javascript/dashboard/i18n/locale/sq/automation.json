@@ -130,14 +130,9 @@
     "EVENTS": {
       "CONVERSATION_CREATED": "Conversation Created",
       "CONVERSATION_UPDATED": "Conversation Updated",
-<<<<<<< HEAD
-      "MESSAGE_CREATED": "Message Created",
-      "CONVERSATION_OPENED": "Conversation Opened"
-=======
       "MESSAGE_CREATED": "Mesazhi u krijua",
       "CONVERSATION_RESOLVED": "Biseda u zgjidh",
       "CONVERSATION_OPENED": "Biseda u hap"
->>>>>>> 4db811354 (chore: Update translations (#12228))
     },
     "ACTIONS": {
       "ASSIGN_AGENT": "Cakto te një agjent",
@@ -149,16 +144,10 @@
       "MUTE_CONVERSATION": "Heshto bisedën",
       "SNOOZE_CONVERSATION": "Snooze Conversation",
       "RESOLVE_CONVERSATION": "Resolve Conversation",
-<<<<<<< HEAD
-      "SEND_WEBHOOK_EVENT": "Send Webhook Event",
-      "SEND_ATTACHMENT": "Send Attachment",
-      "SEND_MESSAGE": "Send a Message",
-=======
       "SEND_WEBHOOK_EVENT": "Dërgo një ngjarje webhook",
       "SEND_ATTACHMENT": "Dërgo një bashkëngjitje",
       "SEND_MESSAGE": "Dërgo një mesazh",
       "ADD_PRIVATE_NOTE": "Shto një shënim privat",
->>>>>>> 4db811354 (chore: Update translations (#12228))
       "CHANGE_PRIORITY": "Change Priority",
       "ADD_SLA": "Add SLA",
       "OPEN_CONVERSATION": "Open conversation"
@@ -188,7 +177,8 @@
       "REFERER_LINK": "Lidhja e referuesit",
       "ASSIGNEE_NAME": "Assignee",
       "TEAM_NAME": "Team",
-      "PRIORITY": "Priority"
+      "PRIORITY": "Priority",
+      "LABELS": "Labels"
     }
   }
 }

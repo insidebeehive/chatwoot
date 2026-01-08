@@ -233,7 +233,6 @@
     "SWITCH_ACCOUNT": "החלף חשבון",
     "CONTACT_SUPPORT": "צור קשר עם התמיכה",
     "SELECTOR_SUBTITLE": "בחר חשבון מהרשימה הבאה",
-<<<<<<< HEAD
     "PROFILE_SETTINGS": "הגדרות פרופיל",
     "YEAR_IN_REVIEW": "Year in Review",
     "KEYBOARD_SHORTCUTS": "קיצורי מקלדת",
@@ -242,15 +241,6 @@
     "DOCS": "קרא תיעוד",
     "CHANGELOG": "יומן שינויים",
     "LOGOUT": "התנתק"
-=======
-    "PROFILE_SETTINGS": "Profile settings",
-    "KEYBOARD_SHORTCUTS": "Keyboard shortcuts",
-    "APPEARANCE": "Change appearance",
-    "SUPER_ADMIN_CONSOLE": "SuperAdmin console",
-    "DOCS": "Read documentation",
-    "CHANGELOG": "Changelog",
-    "LOGOUT": "Log out"
->>>>>>> 4db811354 (chore: Update translations (#12228))
   },
   "APP_GLOBAL": {
     "TRIAL_MESSAGE": "שנותרו ימי ניסיון.",

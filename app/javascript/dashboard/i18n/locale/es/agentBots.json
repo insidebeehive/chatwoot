@@ -87,11 +87,7 @@
       "ERRORS": {
         "NAME": "El nombre del bot es obligatorio",
         "URL": "Dirección del webhook es requerida",
-<<<<<<< HEAD
         "VALID_URL": "Por favor, introduzca una URL válida comenzando con http:// o https://"
-=======
-        "VALID_URL": "Please enter a valid URL starting with http:// or https://"
->>>>>>> 4db811354 (chore: Update translations (#12228))
       },
       "CANCEL": "Cancelar",
       "CREATE": "Crear Bot",

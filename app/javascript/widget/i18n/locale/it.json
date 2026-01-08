@@ -20,31 +20,18 @@
   "TEAM_AVAILABILITY": {
     "ONLINE": "Siamo online",
     "OFFLINE": "Siamo offline in questo momento",
-<<<<<<< HEAD
     "BACK_AS_SOON_AS_POSSIBLE": "Torneremo il prima possibile"
-=======
-    "BACK_AS_SOON_AS_POSSIBLE": "We will be back as soon as possible"
->>>>>>> 4db811354 (chore: Update translations (#12228))
   },
   "REPLY_TIME": {
     "IN_A_FEW_MINUTES": "In genere risponde in pochi minuti",
     "IN_A_FEW_HOURS": "In genere risponde in poche ore",
     "IN_A_DAY": "In genere risponde in un giorno",
-<<<<<<< HEAD
     "BACK_IN_HOURS": "Torneremo online in {n} ora | Torneremo online in {n} ore",
     "BACK_IN_MINUTES": "Torneremo online in {time} minuti",
     "BACK_AT_TIME": "Torneremo online alle {time}",
     "BACK_ON_DAY": "Torneremo online il {day}",
     "BACK_TOMORROW": "Torneremo online domani",
     "BACK_IN_SOME_TIME": "Torneremo online a breve"
-=======
-    "BACK_IN_HOURS": "We will be back online in {n} hour | We will be back online in {n} hours",
-    "BACK_IN_MINUTES": "We will be back online in {time} minutes",
-    "BACK_AT_TIME": "We will be back online at {time}",
-    "BACK_ON_DAY": "We will be back online on {day}",
-    "BACK_TOMORROW": "We will be back online tomorrow",
-    "BACK_IN_SOME_TIME": "We will be back online in some time"
->>>>>>> 4db811354 (chore: Update translations (#12228))
   },
   "DAY_NAMES": {
     "SUNDAY": "Domenica",
@@ -137,13 +124,8 @@
   },
   "PORTAL": {
     "POPULAR_ARTICLES": "Articoli Popolari",
-<<<<<<< HEAD
     "VIEW_ALL_ARTICLES": "Visualizza tutti gli articoli",
     "IFRAME_LOAD_ERROR": "C'è stato un errore nel caricamento dell'articolo, ricarica la pagina e riprova."
-=======
-    "VIEW_ALL_ARTICLES": "View all articles",
-    "IFRAME_LOAD_ERROR": "There was an error loading the article, please refresh the page and try again."
->>>>>>> 4db811354 (chore: Update translations (#12228))
   },
   "ATTACHMENTS": {
     "image": {

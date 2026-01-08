@@ -18,12 +18,8 @@
     "CREATED_AT_LABEL": "Utworzono",
     "NEW_MESSAGE": "Nowa wiadomość",
     "CALL": "Call",
-<<<<<<< HEAD
     "CALL_INITIATED": "Calling the contact…",
     "CALL_FAILED": "Unable to start the call. Please try again.",
-=======
-    "CALL_UNDER_DEVELOPMENT": "Calling is under development",
->>>>>>> 4db811354 (chore: Update translations (#12228))
     "VOICE_INBOX_PICKER": {
       "TITLE": "Choose a voice inbox"
     },

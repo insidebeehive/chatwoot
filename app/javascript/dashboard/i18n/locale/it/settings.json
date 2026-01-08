@@ -229,7 +229,6 @@
   },
   "SIDEBAR_ITEMS": {
     "CHANGE_AVAILABILITY_STATUS": "Cambia",
-<<<<<<< HEAD
     "CHANGE_ACCOUNTS": "Cambia account",
     "SWITCH_ACCOUNT": "Cambia account",
     "CONTACT_SUPPORT": "Contatta il supporto",
@@ -242,19 +241,6 @@
     "DOCS": "Leggi la documentazione",
     "CHANGELOG": "Changelog",
     "LOGOUT": "Disconnetti"
-=======
-    "CHANGE_ACCOUNTS": "Switch account",
-    "SWITCH_ACCOUNT": "Switch account",
-    "CONTACT_SUPPORT": "Contact support",
-    "SELECTOR_SUBTITLE": "Seleziona un account dal seguente elenco",
-    "PROFILE_SETTINGS": "Profile settings",
-    "KEYBOARD_SHORTCUTS": "Keyboard shortcuts",
-    "APPEARANCE": "Change appearance",
-    "SUPER_ADMIN_CONSOLE": "SuperAdmin console",
-    "DOCS": "Read documentation",
-    "CHANGELOG": "Changelog",
-    "LOGOUT": "Log out"
->>>>>>> 4db811354 (chore: Update translations (#12228))
   },
   "APP_GLOBAL": {
     "TRIAL_MESSAGE": "giorni di prova rimanenti.",

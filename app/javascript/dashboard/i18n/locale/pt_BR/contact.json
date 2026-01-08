@@ -18,16 +18,10 @@
     "CREATED_AT_LABEL": "Criado",
     "NEW_MESSAGE": "Nova Mensagem",
     "CALL": "Chamada",
-<<<<<<< HEAD
     "CALL_INITIATED": "Calling the contact…",
     "CALL_FAILED": "Unable to start the call. Please try again.",
     "VOICE_INBOX_PICKER": {
       "TITLE": "Escolha uma caixa de entrada de voz"
-=======
-    "CALL_UNDER_DEVELOPMENT": "Calling is under development",
-    "VOICE_INBOX_PICKER": {
-      "TITLE": "Choose a voice inbox"
->>>>>>> 4db811354 (chore: Update translations (#12228))
     },
     "CONVERSATIONS": {
       "NO_RECORDS_FOUND": "Não há conversas anteriores associadas a este contato.",
