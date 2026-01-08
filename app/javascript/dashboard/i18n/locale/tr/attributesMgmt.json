@@ -13,7 +13,7 @@
       "TEXT": "Metin",
       "NUMBER": "Sayı",
       "LINK": "Bağlantı",
-      "DATE": "Tarih",
+      "DATE": "Date",
       "LIST": "Liste",
       "CHECKBOX": "Onay Kutusu"
     },
@@ -129,10 +129,6 @@
       "ENABLE_REGEX": {
         "LABEL": "Düzenli ifade doğrulamasını aç"
       }
-    },
-    "BADGES": {
-      "PRE_CHAT": "Pre-chat",
-      "RESOLUTION": "Resolution"
     }
   }
 }
