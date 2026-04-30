@@ -22,6 +22,11 @@ export function useAttachments() {
     return channelConfig?.enabledFeatures?.includes('emoji_picker') || false;
   });
 
+  const hasVoiceNoteEnabled = computed(() => {
+    const channelConfig = window.chatwootWebChannel;
+    return channelConfig?.enabledFeatures?.includes('voice_note') || false;
+  });
+
   const canHandleAttachments = computed(() => {
     // If enableFileUpload was explicitly set via SDK, prioritize that
     if (shouldShowFilePicker.value !== undefined) {
@@ -37,6 +42,7 @@ export function useAttachments() {
     shouldShowEmojiPicker,
     hasAttachmentsEnabled,
     hasEmojiPickerEnabled,
+    hasVoiceNoteEnabled,
     canHandleAttachments,
   };
 }

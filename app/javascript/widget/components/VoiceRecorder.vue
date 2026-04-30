@@ -4,8 +4,10 @@ import FluentIcon from 'shared/components/FluentIcon/Index.vue';
 import Spinner from 'shared/components/Spinner.vue';
 import { emitter } from 'shared/helpers/mitt';
 import { BUS_EVENTS } from 'shared/constants/busEvents';
-import { MAXIMUM_FILE_UPLOAD_SIZE } from 'shared/constants/messages';
-import { checkFileSizeLimit } from 'shared/helpers/FileHelper';
+import {
+  checkFileSizeLimit,
+  DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE,
+} from 'shared/helpers/FileHelper';
 import { DirectUpload } from 'activestorage';
 
 export default {
@@ -83,7 +85,7 @@ export default {
           type: 'audio/mp3',
         });
 
-        if (checkFileSizeLimit(file, MAXIMUM_FILE_UPLOAD_SIZE)) {
+        if (checkFileSizeLimit(file, DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE)) {
           if (this.globalConfig.directUploadsEnabled) {
             await this.onDirectFileUpload(file);
           } else {
@@ -92,7 +94,8 @@ export default {
         } else {
           emitter.emit(BUS_EVENTS.SHOW_ALERT, {
             message: this.$t('FILE_SIZE_LIMIT', {
-              MAXIMUM_FILE_UPLOAD_SIZE: MAXIMUM_FILE_UPLOAD_SIZE,
+              DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE:
+                DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE,
             }),
           });
         }
@@ -110,7 +113,7 @@ export default {
       }
       this.isUploading = true;
       try {
-        if (checkFileSizeLimit(file, MAXIMUM_FILE_UPLOAD_SIZE)) {
+        if (checkFileSizeLimit(file, DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE)) {
           const { websiteToken } = window.chatwootWebChannel;
           const upload = new DirectUpload(
             file.file,
@@ -137,7 +140,7 @@ export default {
         } else {
           emitter.emit(BUS_EVENTS.SHOW_ALERT, {
             message: this.$t('FILE_SIZE_LIMIT', {
-              MAXIMUM_FILE_UPLOAD_SIZE: this.fileUploadSizeLimit,
+              DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE: this.fileUploadSizeLimit,
             }),
           });
         }
@@ -155,7 +158,7 @@ export default {
       }
       this.isUploading = true;
       try {
-        if (checkFileSizeLimit(file, MAXIMUM_FILE_UPLOAD_SIZE)) {
+        if (checkFileSizeLimit(file, DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE)) {
           await this.onAttach({
             file: file,
             ...this.getLocalFileAttributes(file),
@@ -163,7 +166,7 @@ export default {
         } else {
           emitter.emit(BUS_EVENTS.SHOW_ALERT, {
             message: this.$t('FILE_SIZE_LIMIT', {
-              MAXIMUM_FILE_UPLOAD_SIZE: this.fileUploadSizeLimit,
+              DEFAULT_MAXIMUM_FILE_UPLOAD_SIZE: this.fileUploadSizeLimit,
             }),
           });
         }

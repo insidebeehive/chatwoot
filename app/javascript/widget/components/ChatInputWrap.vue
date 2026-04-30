@@ -35,11 +35,13 @@ export default {
       canHandleAttachments,
       shouldShowEmojiPicker,
       hasEmojiPickerEnabled,
+      hasVoiceNoteEnabled,
     } = useAttachments();
     return {
       canHandleAttachments,
       shouldShowEmojiPicker,
       hasEmojiPickerEnabled,
+      hasVoiceNoteEnabled,
     };
   },
   data() {

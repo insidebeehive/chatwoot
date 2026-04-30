@@ -44,8 +44,7 @@ class Api::V1::Widget::ConversationsController < Api::V1::Widget::BaseController
   end
 
   def toggle_typing
-    # If no conversation exists, create one first
-    @conversation = create_conversation if conversation.nil?
+    return head :ok if conversation.nil?
 
     case permitted_params[:typing_status]
     when 'on'
