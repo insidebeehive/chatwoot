@@ -42,7 +42,6 @@ export default {
     return {
       hasImageError: false,
       hasVideoError: false,
-      hasAudioError: false,
     };
   },
   computed: {
@@ -80,13 +79,11 @@ export default {
     message() {
       this.hasImageError = false;
       this.hasVideoError = false;
-      this.hasAudioError = false;
     },
   },
   mounted() {
     this.hasImageError = false;
     this.hasVideoError = false;
-    this.hasAudioError = false;
   },
   methods: {
     async retrySendMessage() {
@@ -99,9 +96,6 @@ export default {
     },
     onVideoLoadError() {
       this.hasVideoError = true;
-    },
-    onAudioLoadError() {
-      this.hasAudioError = true;
     },
     toggleReply() {
       emitter.emit(BUS_EVENTS.TOGGLE_REPLY_TO_MESSAGE, this.message);
@@ -159,11 +153,8 @@ export default {
                   @error="onVideoLoadError"
                 />
                 <AudioBubble
-                  v-if="attachment.file_type === 'audio' && !hasAudioError"
+                  v-if="attachment.file_type === 'audio'"
                   :url="attachment.data_url"
-                  :widget-color="widgetColor"
-                  is-user-bubble
-                  @error="onAudioLoadError"
                 />
                 <FileBubble
                   v-else-if="attachment.file_type !== 'audio'"
