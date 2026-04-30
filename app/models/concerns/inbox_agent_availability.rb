@@ -18,10 +18,15 @@ module InboxAgentAvailability
   private
 
   def fetch_online_agent_ids
-    OnlineStatusTracker.get_available_users(account_id)
-                       .select { |_key, value| value.eql?('online') }
-                       .keys
-                       .map(&:to_i)
+    candidate_ids = OnlineStatusTracker.get_available_users(account_id)
+                                       .select { |_key, value| value.eql?('online') }
+                                       .keys
+                                       .map(&:to_i)
+    return [] if candidate_ids.empty?
+
+    # Cross-check with DB: Redis status can be stale for auto_offline: false agents.
+    # Only return agents whose DB availability is actually online.
+    account.account_users.where(user_id: candidate_ids, availability: :online).pluck(:user_id)
   end
 end
 

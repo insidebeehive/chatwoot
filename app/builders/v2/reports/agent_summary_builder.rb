@@ -12,7 +12,12 @@ class V2::Reports::AgentSummaryBuilder < V2::Reports::BaseSummaryBuilder
               :avg_resolution_time, :avg_first_response_time, :avg_reply_time
 
   def fetch_conversations_count
-    account.conversations.where(created_at: range).group('assignee_id').count
+    # Count conversations where the agent actually responded (sent the first reply),
+    # not just who was assigned — avoids crediting offline agents who never attended.
+    account.reporting_events
+           .where(name: 'first_response', created_at: range)
+           .group(:user_id)
+           .count
   end
 
   def prepare_report

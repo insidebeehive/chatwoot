@@ -17,7 +17,17 @@ class AutoAssignment::AgentAssignmentService
 
   def online_agent_ids
     online_agents = OnlineStatusTracker.get_available_users(conversation.account_id)
-    online_agents.select { |_key, value| value.eql?('online') }.keys if online_agents.present?
+    return [] if online_agents.blank?
+
+    candidate_ids = online_agents.select { |_key, value| value.eql?('online') }.keys.map(&:to_i)
+    return [] if candidate_ids.empty?
+
+    # Cross-check with DB: Redis status can be stale for auto_offline: false agents.
+    # Only return agents whose DB availability is actually online.
+    conversation.account.account_users
+                .where(user_id: candidate_ids, availability: :online)
+                .pluck(:user_id)
+                .map(&:to_s)
   end
 
   def allowed_online_agent_ids

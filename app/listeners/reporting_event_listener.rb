@@ -13,7 +13,7 @@ class ReportingEventListener < BaseListener
                                               event_end_time),
       account_id: conversation.account_id,
       inbox_id: conversation.inbox_id,
-      user_id: conversation.assignee_id,
+      user_id: resolver_user_id(event, conversation),
       conversation_id: conversation.id,
       event_start_time: conversation.created_at,
       event_end_time: event_end_time
@@ -62,7 +62,7 @@ class ReportingEventListener < BaseListener
       value_in_business_hours: business_hours(conversation.inbox, waiting_since, message.created_at),
       account_id: conversation.account_id,
       inbox_id: conversation.inbox_id,
-      user_id: conversation.assignee_id,
+      user_id: message.sender_id,
       conversation_id: conversation.id,
       event_start_time: waiting_since,
       event_end_time: message.created_at
@@ -162,6 +162,11 @@ class ReportingEventListener < BaseListener
       event_start_time: conversation.created_at,
       event_end_time: event.timestamp
     )
+  end
+
+  def resolver_user_id(event, conversation)
+    performed_by = event.data[:performed_by]
+    performed_by.is_a?(User) ? performed_by.id : conversation.assignee_id
   end
 
   def create_bot_resolved_event(conversation, reporting_event)
