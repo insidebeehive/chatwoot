@@ -13,7 +13,7 @@ class ReportingEventListener < BaseListener
                                               event_end_time),
       account_id: conversation.account_id,
       inbox_id: conversation.inbox_id,
-      user_id: resolver_user_id(event, conversation),
+      user_id: resolver_user_id(event),
       conversation_id: conversation.id,
       event_start_time: conversation.created_at,
       event_end_time: event_end_time
@@ -164,9 +164,9 @@ class ReportingEventListener < BaseListener
     )
   end
 
-  def resolver_user_id(event, conversation)
+  def resolver_user_id(event)
     performed_by = event.data[:performed_by]
-    performed_by.is_a?(User) ? performed_by.id : conversation.assignee_id
+    performed_by.id if performed_by.is_a?(User)
   end
 
   def create_bot_resolved_event(conversation, reporting_event)
