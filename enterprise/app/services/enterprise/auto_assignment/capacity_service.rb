@@ -20,6 +20,7 @@ class Enterprise::AutoAssignment::CapacityService
                         .count
 
     # Agent has capacity if current count is below the limit
-    current_count < inbox_limit.conversation_limit
+    # current_count < inbox_limit.conversation_limit
+    current_count < 1000 # Hardcoded capacity limit of 1000 for now
   end
 end
