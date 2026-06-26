@@ -1,6 +1,7 @@
 class Api::V1::Widget::ContactsController < Api::V1::Widget::BaseController
   include WidgetHelper
 
+  prepend_before_action :log_set_user_request, only: [:set_user]
   before_action :validate_hmac, only: [:set_user]
   after_action :log_set_user, only: [:set_user]
 
@@ -34,6 +35,12 @@ class Api::V1::Widget::ContactsController < Api::V1::Widget::BaseController
 
   private
 
+  # Runs before any auth/lookup so we always capture the incoming request,
+  # even when set_web_widget/set_contact later halt the chain (404) and no response log is produced.
+  def log_set_user_request
+    Rails.logger.info("[Widget#set_user] received request=#{request.raw_post}")
+  end
+
   def log_set_user
     id = begin
       JSON.parse(response.body)['id']
@@ -58,8 +65,13 @@ class Api::V1::Widget::ContactsController < Api::V1::Widget::BaseController
 
   def validate_hmac
     return unless should_verify_hmac?
+    return if valid_hmac?
 
-    render json: { error: 'HMAC failed: Invalid Identifier Hash Provided' }, status: :unauthorized unless valid_hmac?
+    Rails.logger.info(
+      "[Widget#set_user] HMAC failed identifier=#{params[:identifier]} " \
+      "received_hash=#{params[:identifier_hash]} hmac_mandatory=#{@web_widget&.hmac_mandatory}"
+    )
+    render json: { error: 'HMAC failed: Invalid Identifier Hash Provided' }, status: :unauthorized
   end
 
   def should_verify_hmac?
