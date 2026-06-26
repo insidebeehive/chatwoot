@@ -2,6 +2,7 @@ class Api::V1::Widget::ContactsController < Api::V1::Widget::BaseController
   include WidgetHelper
 
   before_action :validate_hmac, only: [:set_user]
+  after_action :log_set_user, only: [:set_user]
 
   def show; end
 
@@ -32,6 +33,15 @@ class Api::V1::Widget::ContactsController < Api::V1::Widget::BaseController
   end
 
   private
+
+  def log_set_user
+    id = begin
+      JSON.parse(response.body)['id']
+    rescue StandardError
+      nil
+    end
+    Rails.logger.info("[Widget#set_user] id=#{id} request=#{request.raw_post} response=#{response.body}")
+  end
 
   def identify_contact(contact)
     contact_identify_action = ContactIdentifyAction.new(
