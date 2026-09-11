@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_07_18_000000) do
+ActiveRecord::Schema[7.1].define(version: 2026_08_28_000000) do
   # These extensions should be enabled to support this database
   enable_extension "pg_stat_statements"
   enable_extension "pg_trgm"
@@ -809,6 +809,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_18_000000) do
     t.index ["team_id"], name: "index_conversations_on_team_id"
     t.index ["uuid"], name: "index_conversations_on_uuid", unique: true
     t.index ["waiting_since"], name: "index_conversations_on_waiting_since"
+    t.index ["account_id", "status", "last_activity_at"], name: "index_conversations_on_account_status_last_activity", order: { last_activity_at: :desc }
   end
 
   create_table "copilot_messages", force: :cascade do |t|
