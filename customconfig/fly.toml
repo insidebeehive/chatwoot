@@ -22,6 +22,10 @@ kill_timeout = 5
   ENABLE_RACK_ATTACK = "true"
   WEB_CONCURRENCY = "2"
   RAILS_MAX_THREADS = "5"
+  # Agent inbox renders ~6 queries per conversation (N+1 in the conversation
+  # partial), so page size drives request cost linearly. 15 keeps the inbox
+  # responsive until that N+1 is fixed.
+  CONVERSATION_RESULTS_PER_PAGE = "15"
 
 # ENABLE_ACCOUNT_SIGNUP=true
 [http_service]
