@@ -12,9 +12,13 @@ primary_region = "sin"
   source = "chatwoot_redis_data"
   destination = "/data"
 
+# Dedicated CPU. On shared-cpu-1x this machine ran with ~67% steal time
+# (more time waiting for CPU than executing), which spiked command latency
+# past the 1s client timeout and cascaded into Sidekiq job-fetch failures,
+# $alfred pool exhaustion and 15s rack-timeout 500s in chatwoot-beehive.
 [[vm]]
-  memory = "512mb"
-  cpu_kind = "shared"
+  memory = "2gb"
+  cpu_kind = "performance"
   cpus = 1
 
 [processes]
