@@ -30,11 +30,17 @@ class GlobalConfig
     private
 
     def typecast_config(config)
-      general_configs = ConfigLoader.new.general_configs
       config.each do |config_key, config_value|
         config_type = general_configs.find { |c| c['name'] == config_key }&.dig('type')
         config[config_key] = ActiveRecord::Type::Boolean.new.cast(config_value) if config_type == 'boolean'
       end
+    end
+
+    # ConfigLoader memoizes per instance, so building a new one here re-read and
+    # re-parsed installation_config.yml on every lookup (~8ms). The file ships with
+    # the app and never changes at runtime, so parse it once per process instead.
+    def general_configs
+      @general_configs ||= ConfigLoader.new.general_configs
     end
 
     def load_from_cache(config_key)
